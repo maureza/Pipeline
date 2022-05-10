@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("git"){
+            steps{
+                git credentialsId: 'server-credentials', url: 'https://github.com/maureza/Cpp.git', branch: 'master'
+            }
+        }
+    }
+}
